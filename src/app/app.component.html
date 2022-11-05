@@ -1,108 +1,17 @@
-<h1>Hello world!</h1>
+<div class="container">
+  <h1>Angular Components</h1>
 
-<p>
-  {{now  | date}}
-</p>
+  <app-post-form
+    (onAdd)="updatePosts($event)"
+  ></app-post-form>
 
+  <hr>
 
-
-
-
-
-
-
-
-
-
+  <app-post
+  *ngFor="let p of posts;"
+  [post]="p"
+  ></app-post>
+</div>
 
 
 
-
-
-<!--<ul style="list-style: none">-->
-<!--  <li *ngFor="let post of objs">-->
-<!--      <p>{{post.title}}</p>-->
-<!--    <b>{{post.author}}</b>-->
-<!--        <ul>-->
-<!--          <li *ngFor="let comment of post.comments">-->
-<!--              <div>-->
-<!--                <small>{{comment.name}}</small>-->
-<!--                <p>{{comment.text}}</p>-->
-<!--              </div>-->
-<!--          </li>-->
-<!--        </ul>-->
-<!--  </li>-->
-<!--</ul>-->
-
-
-
-<!--<ul>-->
-<!--  <li *ngFor="let num of arr; let index = index">-->
-<!--   {{index+1}} <strong>{{num}}</strong>-->
-<!--  </li>-->
-<!--</ul>-->
-
-
-
-
-
-
-
-
-
-
-<!--<button (click)="toggle = !toggle">Toggle</button>-->
-<!--<button (click)="toggle = 125">set default</button>-->
-<!--<div [ngSwitch]="toggle">-->
-<!--<p *ngSwitchCase="true" class="red">Lorem ipsum.</p>-->
-<!--  <p *ngSwitchCase="false" class="blue">Lorem ipsum.</p>-->
-<!--  <p *ngSwitchDefault>default</p>-->
-<!--</div>-->
-
-
-<!--<p *ngIf="toggle; else blueP" class="red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, molestias!</p>-->
-<!--<ng-template #blueP>-->
-<!--  <p  class="blue">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, dolorum?</p>-->
-<!--</ng-template>-->
-
-
-
-<!--<div [ngStyle]="{-->
-<!--  width: '200px',-->
-<!--  height: '200px',-->
-<!--  borderRadius: '5px',-->
-<!--  border: '1px solid blue',-->
-<!--  background: backgroundToggle ? 'red' : 'green'-->
-<!--}"></div>-->
-
-<!--<p [ngClass]="{-->
-<!-- red: backgroundToggle,-->
-<!-- blue: !backgroundToggle-->
-<!--}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, quasi.</p>-->
-
-
-<!--<p-->
-<!--  [class.blue]="!backgroundToggle"-->
-<!--  [class.red]="backgroundToggle"-->
-<!--&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, omnis.</p>-->
-
-
-<!--<p>{{title}}</p>-->
-<!--<p><strong>{{number - 2}}</strong></p>-->
-<!--<p><strong>{{arr}}</strong></p>-->
-<!--<p><strong>{{obj}</strong></p>-->
-<!--<hr>-->
-<!--<img [src]="img" alt="">-->
-<!--<hr>-->
-<!--<button (click)="onClick()">Click me</button>-->
-<!--<input-->
-<!--  type="text"-->
-<!--  (keyup)="onInput($event)"-->
-<!--  (blur)="onBlur(myInput.value)"-->
-<!--  #myInput-->
-<!--&gt;-->
-<!--<p><strong>{{inputValue}}</strong></p>-->
-<!--<hr>-->
-<!--<app-post></app-post>-->
-<!--<hr>-->
-<!--<app-post3></app-post3>-->
